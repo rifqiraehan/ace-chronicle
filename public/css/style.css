@@ -1,0 +1,17 @@
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin signin{
+    border-radius: 0;
+    margin-bottom: -1px;
+}
+
+.form-registration input{
+    border-radius: 0;
+    margin-bottom: -1px;
+}
+
+.form-registration .form-floating:focus-within {
+    z-index: 2;
+}
