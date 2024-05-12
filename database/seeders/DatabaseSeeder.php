@@ -45,14 +45,15 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('secret')
         ]);
 
+        // Category Factory
         Category::create([
-            'name' => 'Programming',
-            'slug' => 'programming',
+            'name' => 'Uncategorized',
+            'slug' => 'uncategorized',
         ]);
 
         Category::create([
-            'name' => 'Culinary',
-            'slug' => 'culinary',
+            'name' => 'Programming',
+            'slug' => 'programming',
         ]);
 
         Category::create([

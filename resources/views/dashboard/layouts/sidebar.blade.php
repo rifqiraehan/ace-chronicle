@@ -6,22 +6,22 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="/dashboard" class="nav-link text-white {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page">
+            <a href="/dashboard" class="nav-link text-white {{ Request::is('dashboard') ? 'active' : '' }} d-flex align-items-center" aria-current="page">
               <i class="bi bi-layout-text-sidebar-reverse pe-none me-2 fs-6"></i>
               Dashboard
             </a>
         </li>
 
         <li>
-            <a href="/dashboard/posts" class="nav-link text-white {{ Request::is('dashboard/posts*') ? 'active' : '' }}">
-            <i class="bi bi-journal-text pe-none me-2 fs-6"></i>
+            <a href="/dashboard/posts" class="nav-link text-white {{ Request::is('dashboard/posts*') ? 'active' : '' }} d-flex align-items-center">
+            <i class="bi bi-file-earmark-text pe-none me-2 fs-6"></i>
               My Posts
-            </a>W
+            </a>
         </li>
         @can('admin')
         <hr>
         <li>
-            <a href="/dashboard/categories" class="nav-link text-white {{ Request::is('dashboard/categories*') ? 'active' : '' }}">
+            <a href="/dashboard/categories" class="nav-link text-white {{ Request::is('dashboard/categories*') ? 'active' : '' }} d-flex align-items-center">
             <i class="bi bi-grid pe-none me-2 fs-6"></i>
               Kategori Post
             </a>
@@ -45,7 +45,7 @@
             <li>
                 <hr class="dropdown-divider">
             </li> --}}
-            <li><a class="dropdown-item" href="/posts">
+            <li><a class="dropdown-item d-flex align-items-center" href="/posts">
               <i class="bi bi-house-door pe-none me-2 fs-6"></i>
               Blogs
             </a></li>
@@ -54,7 +54,7 @@
             </li>
             <form action="/logout" method="POST">
               @csrf
-              <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right  pe-none me-2 fs-6"></i> Logout</a></button>
+              <button type="submit" class="dropdown-item d-flex align-items-center"><i class="bi bi-box-arrow-right  pe-none me-2 fs-6"></i> Logout</a></button>
             </form>
         </ul>
     </div>

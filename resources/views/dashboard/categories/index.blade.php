@@ -1,4 +1,4 @@
-@extends('dashboard/layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
@@ -27,12 +27,11 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $category->name }}</td>
               <td>
-                <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-success"><i class="bi bi-eye"></i></a>
                 <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
                 <form action="/dashboard/categories/{{ $category->slug }}" method="POST" class="d-inline">
                   @method('delete')
                   @csrf
-                  <button class="badge bg-danger border-0" onclick="return confirm('Apakah anda yakin untuk menghapus post tersebut?')"><i class="bi bi-trash"></i></button>
+                  <button class="badge bg-danger border-0" onclick="return confirm('Apakah anda yakin untuk menghapus kategori tersebut?')"><i class="bi bi-trash"></i></button>
                 </form>
                </td>
             </tr>

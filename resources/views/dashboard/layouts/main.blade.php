@@ -1,9 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="../assets/js/color-modes.js"></script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACE Blog | Dashboard</title>
@@ -19,7 +17,6 @@
 
     {{-- Trix Editor --}}
     <link rel="stylesheet" type="text/css" href="/css/trix.css">
-    <script type="text/javascript" src="/js/trix.umd.min.js"></script>
 
     {{-- Hide upload file in trix --}}
     <style>
@@ -44,7 +41,7 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
+  <script type="text/javascript" src="/js/trix.umd.min.js"></script>
   <script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
 </html>

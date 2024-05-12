@@ -108,7 +108,7 @@ class DashboardPostController extends Controller
         Post::where('id', $post->id)
             ->update($validatedData);
 
-        return redirect('/dashboard/posts')->with('success', 'Post berhasil di-update!');
+        return redirect('/dashboard/posts')->with('success', 'Post berhasil diubah!');
     }
 
     /**
