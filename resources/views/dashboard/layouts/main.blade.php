@@ -25,6 +25,14 @@
       trix-toolbar [data-trix-button-group="file-tools"] {
         display: none;
       }
+
+      .navbar-brand {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+
+      * {
+        font-family: "Poppins", sans-serif;
+      }
     </style>
 </head>
 

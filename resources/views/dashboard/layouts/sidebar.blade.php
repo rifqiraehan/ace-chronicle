@@ -51,7 +51,7 @@
             <li>
                 <hr class="dropdown-divider">
             </li> --}}
-            <li><a class="dropdown-item d-flex align-items-center" href="/posts">
+            <li><a class="dropdown-item d-flex align-items-center" href="/">
               <i class="bi bi-file-earmark-text pe-none me-2 fs-6"></i>
               Posts
             </a></li>

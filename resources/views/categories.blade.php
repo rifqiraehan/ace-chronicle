@@ -7,7 +7,7 @@
         <div class="row">
             @foreach ($categories as $category)
                 <div class="col-md-4 my-3">
-                    <a href="/posts?category={{ $category->slug }}">
+                    <a href="?category={{ $category->slug }}">
                         <div class="card text-bg-dark">
                             @if ($category->image)
                                 <img src="{{ asset('storage/' . $category->image) }}" class="card-img-top" alt="{{ $category->name }}" style="width: 500; height: 400; object-fit: fit;">
