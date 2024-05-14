@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 
@@ -69,3 +70,5 @@ Route::resource('/dashboard/users', UserController::class)->middleware('admin');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
+Route::get('/dashboard/profile', [UserProfileController::class, 'index'])->name('profile.index')->middleware('auth');
+Route::put('/dashboard/profile', [UserProfileController::class, 'update'])->name('profile.update')->middleware('auth');

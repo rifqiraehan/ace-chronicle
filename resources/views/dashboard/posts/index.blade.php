@@ -13,6 +13,7 @@
 
     <div class="table-responsive col-lg-12">
       <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Buat Post Baru</a>
+      @if ($posts->count())
       <table class="table table-striped table-sm">
         <thead>
         <tr>
@@ -42,6 +43,9 @@
         </tbody>
       </table>
     </div>
+    @else
+      <p class="text-center fs-4">Belum ada post.</p>
+    @endif
 
 
 @endsection

@@ -48,6 +48,16 @@
           @enderror
         </div>
 
+        <div class="form-floating">
+          <input type="password" name="password_confirmation" class="form-control rounded-bottom @error('password_confirmation') is-invalid @enderror" id="password_confirmation" placeholder="password_confirmation" required>
+          <label for="password_confirmation">Konfirmasi Password</label>
+          @error('password_confirmation')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+          @enderror
+        </div>
+
         <button class="btn btn-primary w-100 py-2 mt-4" type="submit">Register</button>
       </form>
       <small class="d-block text-center mt-3">Sudah punya akun ACE Blog? <a href="/login" class="text-decoration-none">Login aja!</a></small>

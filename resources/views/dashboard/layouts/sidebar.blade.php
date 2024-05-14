@@ -56,7 +56,7 @@
               Posts
             </a></li>
 
-            <li><a class="dropdown-item d-flex align-items-center" href="/posts">
+            <li><a class="dropdown-item d-flex align-items-center" href="/dashboard/profile">
               <i class="bi bi-person pe-none me-2 fs-6"></i>
               Profile
             </a></li>
