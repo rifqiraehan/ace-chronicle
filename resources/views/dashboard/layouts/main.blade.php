@@ -15,6 +15,8 @@
     {{-- My Style --}}
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.ico">
+
     {{-- Trix Editor --}}
     <link rel="stylesheet" type="text/css" href="/css/trix.css">
 
@@ -24,7 +26,6 @@
         display: none;
       }
     </style>
-
 </head>
 
 <body>
@@ -33,7 +34,7 @@
 
     <div class="b-example-vr"></div>
 
-    <div class="container mt-5 scrollarea">
+    <div class="container pt-5 scrollarea">
         @yield('container')
     </div>
 

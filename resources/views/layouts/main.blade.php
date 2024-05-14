@@ -16,6 +16,16 @@
     {{-- My Style --}}
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
+    <style>
+      .navbar-brand {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+
   </head>
   <body>
 

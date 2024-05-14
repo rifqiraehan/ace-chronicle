@@ -10,7 +10,7 @@
                     <a href="/posts?category={{ $category->slug }}">
                         <div class="card text-bg-dark">
                             @if ($category->image)
-                                <img src="{{ asset('storage/' . $category->image) }}" class="card-img-top" alt="{{ $category->name }}">
+                                <img src="{{ asset('storage/' . $category->image) }}" class="card-img-top" alt="{{ $category->name }}" style="width: 500; height: 400; object-fit: fit;">
                             @else
                                 <img src="https://source.unsplash.com/500x400?{{ $category->name }}" class="card-img" alt="{{ $category->name }}">
                             @endif

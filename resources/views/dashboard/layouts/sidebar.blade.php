@@ -21,6 +21,12 @@
         @can('admin')
         <hr>
         <li>
+            <a href="/dashboard/users" class="nav-link text-white {{ Request::is('dashboard/users*') ? 'active' : '' }} d-flex align-items-center">
+            <i class="bi bi-person pe-none me-2 fs-6"></i>
+              Daftar User
+            </a>
+        </li>
+        <li>
             <a href="/dashboard/categories" class="nav-link text-white {{ Request::is('dashboard/categories*') ? 'active' : '' }} d-flex align-items-center">
             <i class="bi bi-grid pe-none me-2 fs-6"></i>
               Kategori Post
@@ -33,7 +39,7 @@
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/{{ auth()->user()->username }}.png" alt="" width="32" height="32"
+            <img src="https://ui-avatars.com/api/?name={{ auth()->user()->name }}.png" alt="" width="32" height="32"
                 class="rounded-circle me-2">
             <strong>{{ auth()->user()->username }}</strong>
         </a>
@@ -46,15 +52,22 @@
                 <hr class="dropdown-divider">
             </li> --}}
             <li><a class="dropdown-item d-flex align-items-center" href="/posts">
-              <i class="bi bi-house-door pe-none me-2 fs-6"></i>
-              Blogs
+              <i class="bi bi-file-earmark-text pe-none me-2 fs-6"></i>
+              Posts
             </a></li>
+
+            <li><a class="dropdown-item d-flex align-items-center" href="/posts">
+              <i class="bi bi-person pe-none me-2 fs-6"></i>
+              Profile
+            </a></li>
+
             <li>
                 <hr class="dropdown-divider">
             </li>
+
             <form action="/logout" method="POST">
               @csrf
-              <button type="submit" class="dropdown-item d-flex align-items-center"><i class="bi bi-box-arrow-right  pe-none me-2 fs-6"></i> Logout</a></button>
+              <button type="submit" class="dropdown-item d-flex align-items-center"><i class="bi bi-box-arrow-right pe-none me-2 fs-6"></i> Logout</a></button>
             </form>
         </ul>
     </div>

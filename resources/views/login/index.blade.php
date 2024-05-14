@@ -4,7 +4,7 @@
 
 <div class="row d-flex justify-content-center">
   <div class="col-md-4">
-    <main class="form-signin w-100 m-auto">
+    <main class="form-signin w-100 m-auto mt-5">
       @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           {{ session('success') }}
@@ -23,7 +23,7 @@
         @csrf
         <div class="form-floating">
           <input type="username" name="username" class="form-control rounded-0 rounded-top @error('username') is-invalid @enderror" id="username" placeholder="johndoe" autofocus required value="{{ old('username') }}">
-          <label for="username">Username</label>
+          <label for="username">Username atau Email</label>
           @error('username')
             <div class="invalid-feedback">
               {{ $message }}
@@ -42,6 +42,5 @@
     </main>
   </div>
 </div>
-
 @endsection
 

@@ -4,7 +4,7 @@
 
 <div class="row d-flex justify-content-center">
   <div class="col-lg-5">
-    <main class="form-registration w-100 m-auto">
+    <main class="form-registration w-100 m-auto mt-5">
       <h1 class="h3 mb-3 fw-normal text-center">Form Registrasi</h1>
       <form action="/register" method="POST">
         @csrf
