@@ -1,0 +1,64 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Rifqi Raehan",
+            "username": "rifqiraehan",
+            "email": "rifqiraehan86@gmail.com",
+            "email_verified_at": null,
+            "password": "$2y$12$wUKQLr8jMn6ed54WDyQjiuunFRpkiijIk6OI\/c4WbBvmw6NsoTyPm",
+            "is_admin": "1",
+            "remember_token": null,
+            "created_at": "2024-05-07 04:51:33",
+            "updated_at": "2024-05-07 04:51:33"
+        },
+        {
+            "id": "2",
+            "name": "Yuuki",
+            "username": "TuturuYuuki",
+            "email": "tuturu.yukihime@gmail.com",
+            "email_verified_at": null,
+            "password": "$2y$12$7QmbmkzbVS8dTLyxSBVHyOiDEmm2oYV3AAMvAx7sdxrsofORDkZ9e",
+            "is_admin": "0",
+            "remember_token": null,
+            "created_at": "2024-05-07 04:59:08",
+            "updated_at": "2024-05-07 04:59:08"
+        },
+        {
+            "id": "3",
+            "name": "evan",
+            "username": "evanlele",
+            "email": "evanlele@gmail.com",
+            "email_verified_at": null,
+            "password": "$2y$12$yJnAYn2zDyXkaJBjfPQ7LufkqD70B4LIOgahZIiD92VvInzipnX42",
+            "is_admin": "0",
+            "remember_token": null,
+            "created_at": "2024-05-07 05:27:11",
+            "updated_at": "2024-05-07 05:27:11"
+        },
+        {
+            "id": "4",
+            "name": "Rei",
+            "username": "Rei",
+            "email": "muhammadibnuathoillah84@gmail.com",
+            "email_verified_at": null,
+            "password": "$2y$12$.xcyJ84xo9aJcSUrhAA8aOVhqNIrG6zdI0bdYc5It0eFdYHy4W4iu",
+            "is_admin": "0",
+            "remember_token": null,
+            "created_at": "2024-05-07 06:52:16",
+            "updated_at": "2024-05-07 06:52:16"
+        },
+        {
+            "id": "5",
+            "name": "suki",
+            "username": "suki",
+            "email": "suki@gmail.com",
+            "email_verified_at": null,
+            "password": "$2y$12$z2szdPAmmmzNIGXVIKTUB.oPvO9OykgkOIj.Wf41nelZ0BezGKjwK",
+            "is_admin": "0",
+            "remember_token": null,
+            "created_at": "2024-05-07 08:22:05",
+            "updated_at": "2024-05-07 08:22:05"
+        }
+    ]
+}
