@@ -12,7 +12,13 @@
     @endif
 
     <div class="table-responsive col-lg-12">
-      <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Buat Post Baru</a>
+      <div class="d-flex mb-3 no-print">
+        <a href="/dashboard/posts/create" class="btn btn-primary me-2 no-print">Buat Post Baru</a>
+
+        <a href="#" onclick="window.print(); return false;" class="btn btn btn-success no-print">
+          Export
+        </a>
+      </div>
       @if ($posts->count())
       <table class="table table-striped table-sm">
         <thead>
@@ -20,7 +26,7 @@
             <th>#</th>
             <th>Judul</th>
             <th>Kategori</th>
-            <th>Action</th>
+            <th class="no-print">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -29,7 +35,7 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $post->title }}</td>
               <td>{{ $post->category->name }}</td>
-              <td>
+              <td class="no-print">
                 <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-success"><i class="bi bi-eye"></i></a>
                 <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
                 <form action="/dashboard/posts/{{ $post->slug }}" method="POST" class="d-inline">

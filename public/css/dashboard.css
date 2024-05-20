@@ -138,3 +138,36 @@ main {
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
 }
+
+// hide the trix toolbar
+trix-toolbar [data-trix-button-group="file-tools"] {
+  display: none;
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@media print {
+  .no-print {
+      display: none;
+  }
+
+  .scrollarea {
+    overflow-y: hidden;
+  }
+}
+
+.sidebar-wrapper {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+}

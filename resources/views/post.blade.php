@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <h1 class="mb-3">{{ $post->title }}</h1>
 
-                <p>Dari <a href="?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> di <a href="?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
+                <p>Diposting oleh <a href="/?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> di <a href="/?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a> pada {{ $post->created_at->diffForHumans() }}</p>
 
                 @if ($post->image)
                     <div style="overflow: hidden;">
@@ -21,7 +21,7 @@
                     {!! $post->body !!}
                 </article>
 
-                <a href="/" class="mt-3 text-decoration-none btn btn-primary">Kembali</a>
+                <a href="{{ route('home', ['page' => $page]) }}" class="mt-3 text-decoration-none btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>

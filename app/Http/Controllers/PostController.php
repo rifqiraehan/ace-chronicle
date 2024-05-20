@@ -22,6 +22,9 @@ class PostController extends Controller
             $title = ' dari ' . ($author ? $author->name : 'Author Tidak Ditemukan');
         }
 
+        $page = request('page', 1); // Ambil halaman saat ini
+        session(['page' => $page]); // Simpan halaman saat ini ke sesi
+
         return view('posts', [
             "title" => "Semua Postingan" . $title,
             "active" => "posts",
@@ -31,10 +34,13 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
+        $page = session('page', 1); // Ambil halaman dari sesi atau default ke 1
+
         return view('post', [
             "title" => "Single Post",
             "active" => "posts",
-            "post" => $post
+            "post" => $post,
+            "page" => $page
         ]);
     }
 }

@@ -11,8 +11,15 @@
         </div>
     @endif
 
-    <div class="table-responsive col-lg-8">
-        <a href="/dashboard/users/create" class="btn btn-primary mb-3">Buat User Baru</a>
+    <div class="table-responsive col-lg-12">
+        <div class="d-flex mb-3 no-print">
+            <a href="/dashboard/users/create" class="btn btn-primary me-2 no-print">Buat User Baru</a>
+
+            <a href="#" onclick="window.print(); return false;" class="btn btn btn-success no-print">
+                Export
+            </a>
+        </div>
+
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -20,7 +27,7 @@
                     <th>Nama</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Action</th>
+                    <th class="no-print">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,7 +37,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->username }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>
+                        <td class="no-print">
                             <a href="/dashboard/users/{{ $user->id }}" class="badge bg-success"><i
                                     class="bi bi-eye"></i></a>
                             <a href="/dashboard/users/{{ $user->id }}/edit" class="badge bg-warning"><i

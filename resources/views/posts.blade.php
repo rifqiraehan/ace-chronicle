@@ -32,7 +32,7 @@
             <img src="https://source.unsplash.com/1200x400?{{ $posts[0]->category->name }}" class="card-img-top" alt="{{ $posts[0]->category->name }}" class="img-fluid">
         @endif
         <div class="card-body text-center">
-            <h3 class="card-title"><a href="/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
+            <h3 class="card-title"><a href="{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
             <p>
                 <small class="text-body-secondary text-muted">
                     <p>Diposting oleh <a href="?author={{ $posts[0]->author->username }}" class="text-decoration-none">{{ $posts[0]->author->name }}</a> di <a href="?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a> pada {{ $posts[0]->created_at->diffForHumans() }}</p>
@@ -41,7 +41,7 @@
 
             <p class="card-text">{{ $posts[0]->excerpt }}</p>
 
-            <a href="/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
+            <a href="{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
         </div>
     </div>
 
@@ -65,7 +65,7 @@
                         </small>
                         </p>
                         <p class="card-text">{{ $post->excerpt }}</p>
-                        <a href="/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+                        <a href="{{ $post->slug }}" class="btn btn-primary">Read more</a>
                         </div>
                     </div>
                 </div>

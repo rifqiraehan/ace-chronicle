@@ -39,7 +39,7 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('', [PostController::class, 'index'])->name('home');
 
 Route::get('/categories', function() {
     return view('categories', [

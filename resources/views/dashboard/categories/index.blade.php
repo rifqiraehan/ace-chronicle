@@ -12,13 +12,20 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-      <a href="/dashboard/categories/create" class="btn btn-primary mb-3">Buat Kategori Baru</a>
+      <div class="d-flex mb-3 no-print">
+        <a href="/dashboard/categories/create" class="btn btn-primary me-2 no-print">Buat Kategori Baru</a>
+
+        <a href="#" onclick="window.print(); return false;" class="btn btn btn-success no-print">
+          Export
+        </a>
+      </div>
+    </div>
       <table class="table table-striped table-sm">
         <thead>
         <tr>
             <th>#</th>
             <th>Nama Kategori</th>
-            <th>Aksi</th>
+            <th class="no-print">Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +33,7 @@
             <tr>
               <td>{{ $loop->iteration }}</td>
               <td>{{ $category->name }}</td>
-              <td>
+              <td class="no-print">
                 <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil"></i></a>
                 <form action="/dashboard/categories/{{ $category->slug }}" method="POST" class="d-inline">
                   @method('delete')
