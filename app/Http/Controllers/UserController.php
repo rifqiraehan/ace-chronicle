@@ -100,4 +100,16 @@ class UserController extends Controller
 
         return redirect('/dashboard/users')->with('success', 'User berhasil dihapus!');
     }
+
+    /**
+     * Reset password user to "secret"
+     */
+    public function resetPassword(Request $request, User $user)
+    {
+        $user->update([
+            'password' => Hash::make('secret')
+        ]);
+
+        return redirect('/dashboard/users')->with('success', 'Password user berhasil direset!');
+    }
 }

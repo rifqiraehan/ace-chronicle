@@ -36,7 +36,13 @@
                 {{ $message }}
             </div>
             @enderror
-            <button type="submit" class="btn btn-primary">Update User</button>
+            <div class="d-flex justify-content-start">
+                <button type="submit" class="btn btn-primary">Update User</button>
+                <button type="button" class="btn btn-warning ms-2 text-white" onclick="document.getElementById('reset-password-form').submit();">Reset Password</button>
+            </div>
+        </form>
+        <form id="reset-password-form" action="{{ route('reset-password', $user->id) }}" method="POST" style="display: none;">
+            @csrf
         </form>
     </div>
 @endsection

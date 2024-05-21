@@ -39,8 +39,20 @@
         <button class="btn btn-primary w-100 py-2 mt-4" type="submit">Login</button>
       </form>
       <small class="d-block text-center mt-3">Belum Daftar? <a href="/register" class="text-decoration-none">Daftar Sekarang!</a></small>
+      <hr>
+      <small class="d-block text-center mt-3">Lupa Password? <a id="whatsapp-link" target="_blank" class="text-decoration-none">Hubungi Admin!</a></small>
     </main>
   </div>
 </div>
+
+<script>
+  const phoneNumber = "6287852027464";
+  const message = "Halo min, Saya [nama/username/email] lupa password akun saya di ACE Blog, mohon reset password saya ya. Terima kasih!";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  document.getElementById('whatsapp-link').href = whatsappLink;
+</script>
+
 @endsection
 

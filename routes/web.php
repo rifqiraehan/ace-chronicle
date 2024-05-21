@@ -38,7 +38,6 @@ Route::get('/about', function () {
     ]);
 });
 
-
 Route::get('', [PostController::class, 'index'])->name('home');
 
 Route::get('/categories', function() {
@@ -59,8 +58,6 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-
-
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
@@ -68,7 +65,7 @@ Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class, '
 Route::resource('/dashboard/categories', AdminCategoryController::class)->middleware('admin');
 
 Route::resource('/dashboard/users', UserController::class)->middleware('admin');
-
+Route::post('/dashboard/users/{user}/reset-password', [UserController::class, 'resetPassword'])->name('reset-password')->middleware('admin');
 
 Route::get('/dashboard/profile', [UserProfileController::class, 'index'])->name('profile.index')->middleware('auth');
 Route::put('/dashboard/profile', [UserProfileController::class, 'update'])->name('profile.update')->middleware('auth');
