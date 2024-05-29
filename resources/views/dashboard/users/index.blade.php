@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <div class="table-responsive col-lg-12">
+    <div class="table-responsive col-lg-10">
         <div class="d-flex mb-3 no-print">
             <a href="/dashboard/users/create" class="btn btn-primary me-2 no-print">Buat User Baru</a>
 
@@ -27,6 +27,7 @@
                     <th>Nama</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th>Total Post</th>
                     <th class="no-print">Action</th>
                 </tr>
             </thead>
@@ -37,9 +38,8 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->username }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->total_posts }}</td>
                         <td class="no-print">
-                            <a href="/dashboard/users/{{ $user->id }}" class="badge bg-success"><i
-                                    class="bi bi-eye"></i></a>
                             <a href="/dashboard/users/{{ $user->id }}/edit" class="badge bg-warning"><i
                                     class="bi bi-pencil"></i></a>
                             <form action="/dashboard/users/{{ $user->id }}" method="POST" class="d-inline">

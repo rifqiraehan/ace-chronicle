@@ -14,9 +14,18 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view ('dashboard.users.index', [
-            'users' => User::where('is_admin', false)->get()
-        ]);
+        $totalPosts = Post::selectRaw('user_id, count(*) as total')
+            ->groupBy('user_id')
+            ->pluck('total', 'user_id');
+
+        $users = User::where('is_admin', false)->get();
+
+        // Gabungkan data user dengan total postingan
+        foreach ($users as $user) {
+            $user->total_posts = $totalPosts->get($user->id, 0);
+        }
+
+        return view('dashboard.users.index', compact('users'));
     }
 
     /**
